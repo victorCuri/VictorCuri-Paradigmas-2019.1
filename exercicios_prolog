@@ -1,0 +1,32 @@
+doublelist([],[]).
+doublelist(L1,L2) :-
+L1 = [H|T],
+L2 = [H1|T1],
+H1 is H*H,
+doublelist(T,T1).
+
+doublelist2(L1,L2) :-
+L1 = [H|T],
+D is H*2,
+L2 = [D|T].
+
+sum([],0).
+sum(L1,X) :-
+L1 = [H|T],
+sum(T,X1),
+X is H+X1.
+
+
+ult([H],H).
+ult(L,U) :-
+L = [_|T],
+ult(T,U).
+
+ismember(A,L) :- member(A,L).
+
+ao_lado(X, Y, L) :- nextto(X,Y,L).
+ao_lado(X, Y, L) :- nextto(Y,X,L).
+
+um_entre(X, Y, L) :- nextto(X,Z,L),nextto(Z,Y,L) ; nextto(Y,Z,L),nextto(Z,X,L).
+
+
