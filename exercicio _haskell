@@ -1,0 +1,97 @@
+-- Eleva um numero ao quadrado
+-- Aqui temos um comentario!
+square :: Int -> Int
+square x = x^2
+
+-- Verifica se um numero eh par (usa if/then/else para expressar funcao condicional)
+-- A funcao 'mod' retorna resto da divisao inteira
+isEven :: Int -> Bool
+isEven n = if mod n 2 == 0 then True else False
+-- Ou simplesmente:
+-- isEven n = mod n 2 == 0
+
+-- Gera um numero a partir de um caracter 
+-- Note esta estrutura condicional em Haskell, usando'guardas' (|)
+encodeMe :: Char -> Int
+encodeMe c 
+   | c == 'S'  = 0
+   | c == 'N'  = 1
+   | otherwise = undefined
+
+-- Calcula o quadrado do primeiro elemento da lista
+-- Note que '[Int]' designa uma lista de elementos do tipo Int 
+squareFirst :: [Int] -> Int
+squareFirst lis = (head lis)^2
+
+-- Verifica se uma palavra tem mais de 10 caracteres
+isLongWord :: String -> Bool -- isso é o mesmo que: isLongWord :: [Char] -> Bool
+isLongWord s = length s > 10
+
+-----------------------------EXERCICIOS------------------------------------------
+
+sumSquares :: Int -> Int -> Int
+sumSquares x y = x*x + y*y
+
+hasEqHeads :: [Int] -> [Int] -> Bool
+hasEqHeads l1 l2 = if head l1 == head l2 then True else False
+
+plusList :: [String] -> [String]
+plusList list = map ("Super"++) list
+
+spaceCount :: String -> Int
+spaceCount s = length(filter (== ' ') s)
+
+--funcMap :: [Float] -> Float
+--funcMap ns = map (\n -> 3*n*n + 2/n + 1) ns
+
+filterNeg :: [Int] -> [Int]
+filterNeg ln = filter(<0) ln
+
+filterNumber :: [Int] -> [Int]
+filterNumber ln = filter (\n -> n >= 1 && n <= 100) ln
+
+idade :: [Int] -> [Int]
+idade ln = filter (\n -> 2019-n > 1980) ln
+
+onlyEven :: [Int] -> [Int]
+onlyEven ln = filter even ln
+
+charFound :: Char -> String -> Bool
+charFound c str = filter (== c) str /= []
+
+lastChar :: [String] -> [String]
+lastChar name = filter (\n -> last n == 'a') name
+
+-------------------------------------- T1 ---------------------------------------------------
+
+isVowel :: Char -> Bool 
+isVowel x = if x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u' then True 
+		
+
+addComma :: [String] -> [String]
+addComma l = map (++",") l
+
+htmlListItemsLombada :: [String] -> [String]
+htmlListItemsLombada l = map (\xl -> "<LI>" ++ xl ++ "</LI>") l
+
+isntVowel :: Char -> Bool
+isntVowel x = not(isVowel x)
+
+semVogais :: String -> String
+semVogais string = filter isntVowel string
+
+isLetter :: String -> Bool
+isLetter str = if str  == ' ' then True
+
+confere :: String -> String
+confere str = if isLetter str then str else '-' 
+
+codifica :: String -> String
+codifica str = map confere str
+
+firstName :: String -> String
+firstName str = takeWhile (/= ' ') str
+
+
+lastName :: String -> String
+lastName str = dropWhile (/= ' ') str
