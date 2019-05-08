@@ -1,0 +1,48 @@
+add10total :: [Int] -> [Int]
+add10total n = [x+10 | x <- n]
+
+multN :: Int -> [Int] -> [Int]
+multN n x = [xn*n | xn <- x]
+
+applyExpr :: [Int] -> [Int]
+applyExpr xs = [3*x+2 | x <- xs]
+
+addSuffix :: String -> [String] -> [String]
+addSuffix s ls = [lx ++ s | lx <- ls]
+
+selectgt5 :: [Int] -> [Int]
+selectgt5 n = [x | x <- n, x > 5]
+
+sumOdds :: [Int] -> Int
+sumOdds n = sum [x | x <- n, mod x 2 /= 0]
+
+selectExpr :: [Int] -> [Int]
+selectExpr n = [x | x <- n, x > 20, x < 50]
+
+countShorts :: [String] -> Int
+countShorts str = length [x | x <- str, length x < 5]
+
+calcExpr :: [Float] -> [Float]
+calcExpr n = [(x*x)/2 | x <- n, (x*x)/2 > 10]
+
+trSpaces :: String -> String
+trSpaces str = [if x == ' ' then '-' else x | x <- str]
+
+codifica :: Char -> Char
+codifica c 
+
+	| c == 'a' = '4'
+	| c == 'e' = '3'
+	| c == 'i' = '2'
+	| c == 'o' = '1'
+	| c == 'u' = '0'
+	| otherwise = c
+
+encodeName :: String -> String
+encodeName str = map codifica str
+
+auxupper :: String -> Bool
+auxupper str = if head str == toUpper(head str) then True
+
+upperHead :: [String] -> Int
+upperHead str = length [x | x <- str, auxupper x]
