@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "209235658194",
+    "firebase_url": "https://petinder-8bf18.firebaseio.com",
+    "project_id": "petinder-8bf18",
+    "storage_bucket": "petinder-8bf18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209235658194:android:1e874b91190bd1a0",
+        "android_client_info": {
+          "package_name": "com.cursoandroid.petinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209235658194-988ep0co66p58l0ahuj9ah37bh2tq23g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGP_a_-sPcTe-i-iixDxmBf0gkWpGYdjI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209235658194-988ep0co66p58l0ahuj9ah37bh2tq23g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
