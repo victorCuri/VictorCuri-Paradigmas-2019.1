@@ -1,1 +1,63 @@
-EDIT: criei esse README provisorio, pois estou tendo alguns problemas com o github, em seguida ja adiciono um README
+PETINDER
+
+O aplicativo PeTinder é um app desenvolvido para a adoção de cachorros. O programa é baseado no tinder e seus usuarios dão matches(qunado dois usuarios se dão like) para encontrar o seu par. O aplicativo conta tambem com um chat onde os usuarios podem se comunicar entre eles e uma area para que eles possam editar seus perfis, com sua foto, nome, idade e uma descrição a seu respeito.
+
+
+MODO DE FUNCIONAMENTO:
+
+Após a tela de login, será apresentado a tela activiy_swipe onde mostrará as opções de match, com cards dos usuarios de seu interesse, onde constará uma foto, nome e idade dele. Se voce arrastar o card para a direita, voce dará "deslike", se desliza-lo para a esquerda voce dará um like, caso o outro usuario, o quel voce esta selecionado, tambem tiver lhe dado um "like", voces darão um match e será disponibilizado um chat para os dois. Clicando na foto do usuario do card que aparece na tela Swipe, voce poderá vizualisar o perfil do usuario em questão.
+No topo da tela de Swipe haverão dois icones, clicando no da esquerda(um bonequinho) voce ira para a tela settings onde voce podera preencher o seu perfil com os seus dados e salvalos no banco de dados. Clicando no incone da direita(um balão de fala com uma pata dentro dele) voce ira para atela onde contera todos os seus matches, clicando em cima da foto deles, nessa tela, voce abrirá seu chat com ele.
+
+EDIT: os icones de "X", "i" e um coração na parte superior da tela de swipe são apenas "enfeites", não ocorrerá nada caso clique em cima deles
+
+EDIT1: Conta de cadastrada para acessar o aplicativo 
+Email: usuario@gmail.com
+Senha: 123456
+
+EDT2:Todos usuarios deram "like" nesse usuario(usuario@gmail.com), ou seja, qualquer "like" que for dado formará um "match".
+
+SOBRE O DESENVOLVIMENTO DO APLICATIVO
+
+O aplicativo foi desenvolvido com o sistema Android Studio e usuou como banco de dados e servidor o programa Firebase da google.
+
+USO DE ORIENTAÇÃO A OBJETOS DENTRO DO APLICATIVO
+
+CLASSES:
+
+ARRAYADAPTER
+
+A classe ArrayAdapter é responsavel por "settar" os dados, colhidos em um array na classe Swipe, na classe de interface item.xml e adaptolos à interface em questão.
+
+SWIPE
+
+A classe swipe pega o UID do usuario atual e procura no banco de dados qual a ação deste(Adopt ou Donate), feito isso ela varrerá o banco de dados e cirará uma List<cards>(uma lista de objetos do tipo cards) com os dados de todos usuarios com atividades contrarias à do usuario atual.
+
+CARDS
+
+Classe que contem os objetos utilizados pelas classes anteriores.
+
+MATCHES/CHAT
+
+Coleta e carrega as informaçoes do usuario no banco de dados para uso, classe utilizada da mesma forma que a Swipe, porem carregando e enviando outro tipo de informaçao e fazendo uso de outras classes.
+
+MATCHES/CHAT ADAPTER
+
+Carrega a lista de todos usuarios pegos/coletados na classe anterior(match ou chat) e as adpta para uso na interface
+
+MATCHES/CHAT OBJECT
+
+classe contendo os objetos utilizados pelas outras classes
+
+MATCHES/CHAT VIEWHOLDERS
+
+classe de atribuiçao de dados da interface
+
+CLASSE USUÁRIO
+
+Contem os objetos de cadastro do usuario, utilizado por outras classes 
+Essa classe foi utilizado em classes desenvolvidas mais no inicio do programa, porém em algumas partes do programa ocorreram alguns erros e então ela não foi utilizada quando poderia ter sido.
+
+CLASSE CONFIGURACAOFIREBASE
+
+Classe com metodos de chamada do banco de dados, utilizados e chamados em outras classes para facilitar a progrmação
+Algumas classes não fizeram usso desta classe
